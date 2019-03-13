@@ -1,5 +1,6 @@
 FROM ubuntu:latest
-MAINTAINER: "Joseph Stachelek" <stachel2@msu.edu>
+
+MAINTAINER "Joseph Stachelek" stachel2@msu.edu
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 	gfortran-8 \ 
