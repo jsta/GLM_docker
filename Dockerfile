@@ -3,7 +3,8 @@ FROM ubuntu:latest
 MAINTAINER "Joseph Stachelek" stachel2@msu.edu
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-	gfortran-8 \ 
+	gfortran-8 \
+	gfortran \ 
 	libgd-dev \
 	git \
 	build-essential \
@@ -16,6 +17,14 @@ RUN git clone https://github.com/AquaticEcoDynamics/GLM && \
 	git clone https://github.com/AquaticEcoDynamics/libutil && \
 	git clone https://github.com/AquaticEcoDynamics/libaed2
 
-WORKDIR GLM
+WORKDIR libutil
+
+RUN make
+
+WORKDIR ../libplot
+
+RUN make
+
+WORKDIR ../GLM
 
 RUN make
