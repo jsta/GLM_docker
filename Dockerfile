@@ -6,6 +6,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 	gfortran-8 \ 
 	libgd-dev \
 	git \
+	build-essential \
+	libnetcdf-dev \
 	ca-certificates \
 	&& update-ca-certificates
 
