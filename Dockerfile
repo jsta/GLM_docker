@@ -25,6 +25,10 @@ WORKDIR ../libplot
 
 RUN make
 
+WORKDIR ../libaed2
+
+RUN make
+
 WORKDIR ../GLM
 
 RUN make
