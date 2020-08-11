@@ -2,8 +2,8 @@
 # Usage
 
 ```
-docker run -it jsta/glm /bin/bash
-./glm --version
+docker build -f Dockerfile -t jsta/glm .
+docker run --entrypoint "./glm" jsta/glm
 ```
 
 Based on: https://github.com/AquaticEcoDynamics/GLM/blob/master/.travis.yml

@@ -12,14 +12,14 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 	ca-certificates \
 	&& update-ca-certificates
 
-RUN git clone https://github.com/AquaticEcoDynamics/GLM && \
+RUN git clone -b v3.1.0 https://github.com/AquaticEcoDynamics/GLM && \
 	git clone https://github.com/AquaticEcoDynamics/libplot && \
 	git clone https://github.com/AquaticEcoDynamics/libutil && \
 	git clone https://github.com/AquaticEcoDynamics/libaed2
 
 WORKDIR libutil
 
-RUN make
+RUN F90=gfortran-8 make
 
 WORKDIR ../libplot
 
@@ -31,4 +31,4 @@ RUN F90=gfortran-8 make
 
 WORKDIR ../GLM
 
-RUN make
+RUN ./build_glm.sh
