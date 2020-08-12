@@ -1,4 +1,6 @@
 
+[![Docker Build](https://img.shields.io/docker/cloud/build/jsta/glm)](https://cloud.docker.com/repository/docker/jsta/glm)
+
 ## Installation
 
  * Build `docker` image
