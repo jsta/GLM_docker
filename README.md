@@ -1,10 +1,24 @@
 
-# Usage
+## Installation
+
+ * Build `docker` image
 
 ```
-docker build -f Dockerfile -t jsta/glm .
-docker run --entrypoint "./glm" jsta/glm
+docker build -t jsta/glm .
 ```
+
+ * Add `glm` shell script to your path
+
+## Usage
+
+ * Call `glm` as usual with appended arguments
+ 
+```
+glm --help
+
+```
+
+____
 
 Based on: https://github.com/AquaticEcoDynamics/GLM/blob/master/.travis.yml
 

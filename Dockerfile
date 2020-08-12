@@ -32,3 +32,5 @@ RUN F90=gfortran-8 make
 WORKDIR ../GLM
 
 RUN ./build_glm.sh
+
+WORKDIR ../GLM_project
