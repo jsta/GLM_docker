@@ -1,5 +1,6 @@
 #!/bin/bash
 
-docker run --entrypoint "./../GLM/glm" -v $(pwd):/GLM_project jsta/glm $1
+docker run --entrypoint "./../GLM/glm" -v $(pwd):/GLM_project --user $(id -u):$(id -g) jsta/glm $1
 
 # docker run --rm -it -v $(pwd):/GLM_project jsta/glm /bin/bash
+
